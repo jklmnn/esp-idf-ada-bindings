@@ -18,10 +18,6 @@ project Esp32c3_Lib is
       for Default_Switches ("Ada") use Esp32c3_Lib_Config.Ada_Compiler_Switches;
    end Compiler;
 
-   package Binder is
-      for Switches ("Ada") use ("-Es"); --  Symbolic traceback
-   end Binder;
-
    package Install is
       for Artifacts (".") use ("share");
    end Install;
