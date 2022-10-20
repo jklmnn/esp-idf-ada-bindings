@@ -1,0 +1,7 @@
+name = "esp32c3_lib"
+description = "Ada bindings for the ESP32C3 RiscV SoC based on ESP-IDF"
+version = "0.1.0-dev"
+
+authors = ["Johannes Kliemann"]
+maintainers = ["Johannes Kliemann <jk@jkliemann.de>"]
+maintainers-logins = ["jklmnn"]
