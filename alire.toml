@@ -1,5 +1,5 @@
-name = "esp32c3_lib"
-description = "Ada bindings for the ESP32C3 RiscV SoC based on ESP-IDF"
+name = "esp_idf"
+description = "Ada bindings for the ESP-IDF"
 version = "0.1.0"
 
 authors = ["Johannes Kliemann"]

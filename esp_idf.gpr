@@ -1,7 +1,7 @@
 with "config/esp32c3_lib_config.gpr";
-project Esp32c3_Lib is
+project esp_idf is
 
-   for Library_Name use "Esp32c3_Lib";
+   for Library_Name use "esp_idf";
    for Library_Version use Project'Library_Name & ".so." & Esp32c3_Lib_Config.Crate_Version;
 
    for Source_Dirs use ("src/", "config/");
@@ -22,4 +22,4 @@ project Esp32c3_Lib is
       for Artifacts (".") use ("share");
    end Install;
 
-end Esp32c3_Lib;
+end esp_idf;
