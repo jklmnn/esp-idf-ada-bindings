@@ -1,21 +1,21 @@
-with "config/esp32c3_lib_config.gpr";
+with "config/esp_idf_config.gpr";
 project esp_idf is
 
    for Library_Name use "esp_idf";
-   for Library_Version use Project'Library_Name & ".so." & Esp32c3_Lib_Config.Crate_Version;
+   for Library_Version use Project'Library_Name & ".so." & Esp_Idf_Config.Crate_Version;
 
    for Source_Dirs use ("src/", "config/");
-   for Object_Dir use "obj/" & Esp32c3_Lib_Config.Build_Profile;
+   for Object_Dir use "obj/" & Esp_Idf_Config.Build_Profile;
    for Create_Missing_Dirs use "True";
    for Library_Dir use "lib";
 
    type Library_Type_Type is ("relocatable", "static", "static-pic");
    Library_Type : Library_Type_Type :=
-     external ("ESP32C3_LIB_LIBRARY_TYPE", external ("LIBRARY_TYPE", "static"));
+     external ("Esp_Idf_LIBRARY_TYPE", external ("LIBRARY_TYPE", "static"));
    for Library_Kind use Library_Type;
 
    package Compiler is
-      for Default_Switches ("Ada") use Esp32c3_Lib_Config.Ada_Compiler_Switches;
+      for Default_Switches ("Ada") use Esp_Idf_Config.Ada_Compiler_Switches;
    end Compiler;
 
    package Install is
