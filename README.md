@@ -1,4 +1,4 @@
-# esp32c3-ada-bindings
+# esp-idf-ada-bindings
 
 The ESP-IDF Ada Binding is intended to provide a binding to the
 [ESP-IDF](https://github.com/espressif/esp-idf) from Espressif.
