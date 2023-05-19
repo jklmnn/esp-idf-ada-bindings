@@ -33,7 +33,7 @@ is
    end record;
 
    type LED_Config is record
-      GPIO_Num : GPIO.Num;
+      GPIO_Num : GPIO.GPIO_Pin_Num;
       Max_Leds : Interfaces.Unsigned_32;
       Format   : LED_Pixel_Format := GRB;
       Model    : LED_Model        := WS2812;

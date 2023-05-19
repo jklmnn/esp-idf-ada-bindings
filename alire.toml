@@ -5,3 +5,5 @@ version = "0.1.1"
 authors = ["Johannes Kliemann"]
 maintainers = ["Johannes Kliemann <jk@jkliemann.de>"]
 maintainers-logins = ["jklmnn"]
+[[depends-on]]
+hal = "~0.3.0"
