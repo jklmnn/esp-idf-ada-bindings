@@ -1,4 +1,6 @@
 with "config/esp_idf_config.gpr";
+with "hal.gpr";
+
 project esp_idf is
 
    for Library_Name use "esp_idf";
