@@ -1,6 +1,6 @@
 name = "esp_idf"
 description = "Ada bindings for the ESP-IDF"
-version = "0.1.1"
+version = "5.0.2-1"
 
 authors = ["Johannes Kliemann"]
 maintainers = ["Johannes Kliemann <jk@jkliemann.de>"]
