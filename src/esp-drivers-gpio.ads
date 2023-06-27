@@ -10,7 +10,7 @@ is
                          GPIO_17, GPIO_18, GPIO_19, GPIO_20, GPIO_21) with
       Size => 32;
 
-   type GPIO_Pin is new HAL.GPIO.GPIO_Point with private;
+   type GPIO_Pin is limited new HAL.GPIO.GPIO_Point with private;
 
    function Create (Num  : GPIO_Pin_Num;
                     Mode : HAL.GPIO.GPIO_Config_Mode) return GPIO_Pin;
@@ -75,7 +75,7 @@ private
                          GPIO_20 => 20,
                          GPIO_21 => 21);
 
-   type GPIO_Pin is new HAL.GPIO.GPIO_Point with record
+   type GPIO_Pin is limited new HAL.GPIO.GPIO_Point with record
       Num   : GPIO_Pin_Num;
       Conf  : HAL.GPIO.GPIO_Config_Mode;
       Pull  : HAL.GPIO.GPIO_Pull_Resistor;
