@@ -59,9 +59,8 @@ is
                     Mode : HAL.GPIO.GPIO_Config_Mode) return GPIO_Pin
    is
       use type ESP.Error.ESP_Error;
-      Pin : GPIO_Pin :=
-         GPIO_Pin'(Num, HAL.GPIO.Input, HAL.GPIO.Pull_Up, ESP.Error.OK);
       Dir : Pin_Mode := DISABLE;
+      Error : ESP.Error.ESP_Error;
    begin
       case Mode is
          when HAL.GPIO.Input =>
@@ -69,12 +68,11 @@ is
          when HAL.GPIO.Output =>
             Dir := OUTPUT;
       end case;
-      Pin.Error := Reset_Pin (Pin.Num);
-      if Pin.Error = ESP.Error.OK then
-         Pin.Error := Set_Direction (Pin.Num, Dir);
-         Pin.Conf  := Mode;
+      Error := Reset_Pin (Num);
+      if Error = ESP.Error.OK then
+         Error := Set_Direction (Num, Dir);
       end if;
-      return Pin;
+      return GPIO_Pin'(Num, Mode, HAL.GPIO.Pull_Up, ESP.Error.OK);
    end Create;
 
    function Pin_Num (This : GPIO_Pin) return GPIO_Pin_Num
