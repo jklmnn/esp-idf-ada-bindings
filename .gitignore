@@ -7,3 +7,9 @@
 /lib/
 /alire/
 /config/
+
+rts/adalib
+rts/obj
+rts/ada_source_path
+
+esp-idf
