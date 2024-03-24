@@ -11,7 +11,7 @@ is
          External_Name => "puts";
       Unused_Result : Interfaces.C.int;
       C_String : String (1 .. S'Length + 1);
-    begin
+   begin
       C_String (1 .. S'Length) := S;
       C_String (C_String'Last) := Character'First;
       Unused_Result := Puts (C_String);
